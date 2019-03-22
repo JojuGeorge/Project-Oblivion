@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 33207544426925466}
   - component: {fileID: 114690238938463088}
   - component: {fileID: 108075419287680660}
+  - component: {fileID: 54257560724732372}
+  - component: {fileID: 5197193727778293505}
   - component: {fileID: 114121680011870020}
   - component: {fileID: 114196122075060944}
-  - component: {fileID: 54257560724732372}
   - component: {fileID: 114864275315504104}
   m_Layer: 0
   m_Name: PlayerLaser
@@ -140,32 +141,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114121680011870020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952648864930888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec362fd82fde3fa4894dd716e6cc836d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireingSpeed: 15
---- !u!114 &114196122075060944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952648864930888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276e67ecc54062f4e917768e899e98a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attractor: {fileID: 0}
 --- !u!54 &54257560724732372
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -182,6 +157,46 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &5197193727778293505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952648864930888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.23, y: 6.01, z: 52.44411}
+  m_Center: {x: -1, y: 0, z: 23.777948}
+--- !u!114 &114121680011870020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952648864930888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec362fd82fde3fa4894dd716e6cc836d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireingSpeed: 15
+  damageToGive: 1
+--- !u!114 &114196122075060944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952648864930888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276e67ecc54062f4e917768e899e98a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractor: {fileID: 0}
 --- !u!114 &114864275315504104
 MonoBehaviour:
   m_ObjectHideFlags: 0

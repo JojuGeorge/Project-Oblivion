@@ -34,11 +34,14 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate () {
         rigidBody.MovePosition(rigidBody.position + transform.TransformDirection(moveDir) * moveSpeed * Time.deltaTime);
 
+        /*
         //player rotation mechanics
         Vector3 yRotation = Vector3.up * rotation * rotationSpeed * Time.fixedDeltaTime;
         Quaternion deltaRotation = Quaternion.Euler(yRotation);
         Quaternion targetRotation = rigidBody.rotation * deltaRotation;
         rigidBody.MoveRotation(Quaternion.Slerp(rigidBody.rotation, targetRotation, 50f * Time.deltaTime));
+        */
+        transform.Rotate(0, rotation * rotationSpeed * Time.deltaTime, 0);
     }
 
 

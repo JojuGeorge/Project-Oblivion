@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerLaserController : MonoBehaviour {
 
     public float fireingSpeed;
+    public int damageToGive;
 
 	void Start () {
 		
@@ -12,5 +13,14 @@ public class PlayerLaserController : MonoBehaviour {
 	
 	void Update () {
         transform.position += transform.forward * Time.deltaTime * fireingSpeed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyHealthManager>().GiveDamage(damageToGive);
+            Destroy(gameObject);
+        }
     }
 }

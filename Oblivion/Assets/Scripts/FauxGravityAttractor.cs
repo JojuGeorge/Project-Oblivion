@@ -8,6 +8,7 @@ public class FauxGravityAttractor : MonoBehaviour {
 
     public float gravity = -10f;
 
+    // Transform body is the objects to be under the faux gravity
     public void Attract(Transform body) {
         Vector3 gravityUp = (body.position - transform.position).normalized;    //dir of the player/obj from the center of the planet
         Vector3 bodyUp = body.up;
