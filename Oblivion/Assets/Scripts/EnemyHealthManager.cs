@@ -6,6 +6,8 @@ public class EnemyHealthManager : MonoBehaviour
 {
 
     public int enemyHealth;
+    public int pointsToGive;
+
     void Start()
     {
         
@@ -14,7 +16,9 @@ public class EnemyHealthManager : MonoBehaviour
     void Update()
     {
         if (enemyHealth <= 0) {
+            ScoreManager.AddPoints(pointsToGive);
             Destroy(gameObject);
+            
         }
     }
 

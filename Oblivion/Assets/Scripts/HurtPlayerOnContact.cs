@@ -22,6 +22,8 @@ public class HurtPlayerOnContact : MonoBehaviour
         if(other.tag == "Player")
         {
             PlayerHealthManager.HurtPlayer(damageToGive);
+            //to destroy the laser on hitting the player
+            Destroy(gameObject);
         }
     }
 }

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
     //for firing
     public GameObject laser;
     public Transform fireingPoint1, fireingPoint2;
+    public float shotDelay;
+    private float shotDelayCounter;
 
     void Start() {
         rigidBody = GetComponent<Rigidbody>();
@@ -27,7 +29,18 @@ public class PlayerController : MonoBehaviour {
 
 
         if (Input.GetButtonDown("Fire1")){
+            shotDelayCounter = shotDelay;
             Fire();
+        }
+
+        if (Input.GetButton("Fire1")){
+            shotDelayCounter -= Time.deltaTime;
+
+            if (shotDelayCounter <= 0)
+            {
+                shotDelayCounter = shotDelay;
+                Fire();
+            }
         }
     }
 
