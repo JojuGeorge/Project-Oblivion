@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382560cab8ff5c249a5cde265018af18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeSpan: 0.4
+  lifeSpan: 0.6
 --- !u!114 &2622969573125054301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff153065ac6a5e4c994933083d8d459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 0
+  damageToGive: 1
 --- !u!65 &2043382003302265071
 BoxCollider:
   m_ObjectHideFlags: 0

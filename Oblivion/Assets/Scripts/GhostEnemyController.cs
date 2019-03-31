@@ -27,8 +27,12 @@ public class GhostEnemyController : MonoBehaviour
     }
 
     void Update() {
+        // so that when player is dead it does not go on looking for player transform
+        if (player == null)
+        {
+            return;
+        }
 
-       
 
         if (Vector3.Distance(transform.position, player.position) > stoppingDistance)
         {
@@ -70,6 +74,10 @@ public class GhostEnemyController : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
         */
 
+        // so that when player is dead it does not go on looking for player transform
+        if (player == null) {
+            return;
+        }
         // enemy does not fall on side using this code rather than the above code
         Vector3 targetPosition = new Vector3(player.transform.position.x,
             transform.position.y,
