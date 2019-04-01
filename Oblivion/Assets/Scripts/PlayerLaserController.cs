@@ -22,5 +22,9 @@ public class PlayerLaserController : MonoBehaviour {
             other.GetComponent<EnemyHealthManager>().GiveDamage(damageToGive);
             Destroy(gameObject);
         }
+        if(other.tag == "Obstacles")
+        {
+            Destroy(gameObject);
+        }
     }
 }

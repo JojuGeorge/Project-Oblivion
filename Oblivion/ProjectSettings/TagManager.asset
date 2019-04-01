@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - CheckPoint
+  - Camera
+  - GhostEnemy
+  - Obstacles
+  - HealthPack
+  - PlayerLaser
+  - EnemyLaser
+  - Planet
   layers:
   - Default
   - TransparentFX
@@ -14,15 +22,15 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - GhostEnemy
+  - HealthPack
+  - CheckPoint
+  - Obstacles
+  - PlayerLaser
+  - EnemyLaser
+  - Planet
+  - Camera
   - 
   - 
   - 

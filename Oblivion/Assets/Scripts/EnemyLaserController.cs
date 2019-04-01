@@ -21,4 +21,18 @@ public class EnemyLaserController : MonoBehaviour
         // transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         transform.position += transform.forward * speed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+     
+        if (other.tag == "Obstacles"  )
+        {
+            Destroy(gameObject);
+        }
+
+        else if(other.tag == "HealthPack")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
