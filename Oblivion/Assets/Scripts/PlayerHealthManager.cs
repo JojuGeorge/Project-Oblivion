@@ -32,8 +32,9 @@ public class PlayerHealthManager : MonoBehaviour
         {
             // Destroy(gameObject);
             playerHealth = 0;
-            levelManager.RespawnPlayer();
             isDead = true;
+
+            levelManager.RespawnPlayer();
         }
 
         // text.text = "" + playerHealth;
